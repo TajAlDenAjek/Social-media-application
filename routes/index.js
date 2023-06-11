@@ -13,7 +13,7 @@ router.get('/', (req, res) =>{
     res.send('<h1>Social Media Application API</h1><a href="/api-docs">Documentation</a>');
 });
 router.use('/api-docs', swaggerUI.serve, swaggerUI.setup(swaggerDocument));
-router.use('/api/auth',authRouter);
+router.use('/api/auth' ,authRouter);
 
 
 
