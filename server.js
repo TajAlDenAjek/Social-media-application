@@ -6,6 +6,7 @@ const express=require('express');
 const app=express();
 const corsOptions=require(path.join(__dirname,'config','corsOptions'));
 const db=require(path.join(__dirname,'models','index.js'));
+const expressValidator = require('express-validator')
 
 // built-in middlewares 
 const errorHandlerMiddleware = require(path.join(__dirname,'middlewares','error-handler'));
@@ -58,5 +59,6 @@ db.sequelize.sync().then(()=>{
 
 }).catch((error)=>{
     console.log(error);
+    
 });
 
