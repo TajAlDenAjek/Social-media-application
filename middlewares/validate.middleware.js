@@ -29,11 +29,11 @@ const signup = async (req, res, next) => {
     };
     let validation = new Validator(req.body , validationRule );
     if(validation.passes()){
-        next()
+        next();
     }
     return res.json(validation.errors.errors);
 }
-const login = async (req , res , next ){
+const login = async (req , res , next )=>{
     const validationRule = {
         "email": "required|email",
         "password": "required|min:6|max:20",
