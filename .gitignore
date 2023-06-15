@@ -2,3 +2,5 @@ node_modules
 logs
 .env
 /config/config.json
+ERD.png
+api_endponits.pdf
